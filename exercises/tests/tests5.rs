@@ -22,7 +22,6 @@
 // Execute `rustlings hint tests5` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 /// # Safety
 ///
@@ -32,10 +31,12 @@ unsafe fn modify_by_address(address: usize) {
     // code's behavior and the contract of this function. You may use the
     // comment of the test below as your format reference.
     unsafe {
-        todo!("Your code goes here")
+        *(address as *mut u32) = 0xAABBCCDD;
+        //todo!("Your code goes here")
     }
 }
 
+// 在 Rust 中，as 是一个类型转换操作符，用于显式地将一种类型转换为另一种类型。这是一种直接而简单的转换方式。
 #[cfg(test)]
 mod tests {
     use super::*;
